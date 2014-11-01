@@ -1,0 +1,14 @@
+{
+  "name": "upstreamapp-cordova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserify": "browserify -o www/js/index.js src/client/index.js",
+    "build": "npm run browserify && cordova prepare browser",
+    "watch": "watchy -i www/js/index.js -w www,src/client -- npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}
